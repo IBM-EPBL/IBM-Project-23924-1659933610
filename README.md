@@ -5,6 +5,7 @@ As our lives are very busy these days, we often feel we need more than 24 hrs. a
 Project ID: PNT2022TMID05824
 
 Technical Architecture
+
 ![techarch](https://user-images.githubusercontent.com/67048088/202854993-cb920765-86d9-4f4f-9c8e-ac328b23b0da.png)
 
 Project Workflow:

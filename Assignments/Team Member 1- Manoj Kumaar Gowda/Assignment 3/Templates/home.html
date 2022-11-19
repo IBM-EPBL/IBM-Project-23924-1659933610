@@ -1,0 +1,74 @@
+function validateform(){
+var name=document.forms["validation"]["username"].value;
+var email=document.forms["validation"]["email"].value;
+var password=document.forms["validation"]["password"].value;
+var confirmpwd=document.forms["validation"]["confirmpassword"].value;
+
+
+
+
+if (name==null || name==""){
+  alert("Name can't be empty");
+  return false;
+}
+
+else if (email==null || email==""){
+  alert("Email can't be empty");
+  return false;
+}
+
+else if (password==null || password==""){
+  alert("Pasword can't be empty");
+  return false;
+}
+
+else if (confirmpwd==null || confirmpwd==""){
+  alert("Confirm Pasword can't be empty");
+  return false;
+}
+else if(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))){
+
+  alert("You have entered an invalid email address!");
+  return false
+}
+
+
+
+else if(password.length<6){
+  alert("Password must be at least 6 characters long.");
+  return false;
+  }
+ else if(password!=confirmpwd){<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "893cf398-fc27-49f3-85ff-ca5f415a7513", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "12d6c436-adc0-4a1a-a3a7-80cdfa459b6d", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</head>
+<body><center><h1>SOME FUNNY IMAGES
+      {% for row in files %}
+         <div style="border: 1px solid #EFEFEF;margin:10px;">
+            <h3>{{row.split(".")[0]}} </h3>
+            <img src="https://funedu.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{row}}" width="150px"></td>
+         </div>
+      {% endfor %}
+</h1></center>
+
+</body>
+</html>
+ alert("Password mismatch");
+ return false
+ }
+}

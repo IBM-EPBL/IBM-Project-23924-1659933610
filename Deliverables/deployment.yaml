@@ -1,0 +1,20 @@
+ apiVersion: apps/v1
+ kind: Deployment
+ metadata:
+   name: newspro-app
+ spec:
+   replicas: 1
+   selector:
+     matchLabels:
+       app: newspro-app
+   template:
+     metadata:
+       labels:
+         app: newspro-app
+     spec:
+       containers:
+       - name: newspro-app
+         image: de.icr.io/newspro_namespace/newspro_namespace_repo 
+         imagePullPolicy: Always
+         ports:
+         - containerPort: 5000

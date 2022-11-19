@@ -1,0 +1,10 @@
+ apiVersion: v1
+ kind: Service
+ metadata:
+   name: newspro-app
+ spec:
+   ports:
+   - port: 5000
+     targetPort: 8000
+   selector:
+     app: newspro-app
